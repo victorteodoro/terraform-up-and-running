@@ -4,13 +4,14 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.0"
+      version = "~> 5.0"
     }
   }
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region  = "us-east-2"
+  profile = "default"
 }
 
 resource "aws_instance" "example" {
